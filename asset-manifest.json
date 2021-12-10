@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dana/static/css/main.a617e044.chunk.css",
+    "main.js": "/dana/static/js/main.82f49064.chunk.js",
+    "main.js.map": "/dana/static/js/main.82f49064.chunk.js.map",
+    "runtime-main.js": "/dana/static/js/runtime-main.a2a5f71a.js",
+    "runtime-main.js.map": "/dana/static/js/runtime-main.a2a5f71a.js.map",
+    "static/js/2.2564c92c.chunk.js": "/dana/static/js/2.2564c92c.chunk.js",
+    "static/js/2.2564c92c.chunk.js.map": "/dana/static/js/2.2564c92c.chunk.js.map",
+    "static/js/3.22e24d39.chunk.js": "/dana/static/js/3.22e24d39.chunk.js",
+    "static/js/3.22e24d39.chunk.js.map": "/dana/static/js/3.22e24d39.chunk.js.map",
+    "index.html": "/dana/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/dana/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.2564c92c.chunk.js.LICENSE.txt": "/dana/static/js/2.2564c92c.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/dana/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a2a5f71a.js",
+    "static/js/2.2564c92c.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.82f49064.chunk.js"
+  ]
+}

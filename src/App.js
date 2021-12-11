@@ -1,4 +1,4 @@
-import './App.css';
+import './Style.scss';
 import 'bulma/css/bulma.min.css'
 import Home from './pages/Home'
 

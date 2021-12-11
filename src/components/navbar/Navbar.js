@@ -1,35 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo-dana.jpg'
 
 const Navbar = () => {
-        return (
-            <nav class="navbar" role="navigation" aria-label="main navigation">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <a class="navbar-item" href="https://bulma.io">
-                            <img src={logo} width="112" height="28"/>
-                        </a>
+    const [isActiveNavbar, setIsActiveNavbar] = useState(false)
 
-                        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        </a>
-                    </div>
+    return (
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src={logo} width="112" height="28"/>
+                    </a>
 
-                    <div id="navbarBasicExample" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item">
-                                Contact Us                            
-                            </a>
-                        </div>
+                    <a role="button" onClick={ () => { setIsActiveNavbar(!isActiveNavbar) } }
+                     className={ `navbar-burger ${isActiveNavbar ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" className={ `navbar-menu ${isActiveNavbar ? 'is-active' : ''}`}>
+                    <div class="navbar-end">
+                        <a class="navbar-item">
+                            About
+                        </a>
+                        <a class="navbar-item">
+                            Contact Us                            
+                        </a>
                     </div>
                 </div>
-            </nav>
-        )
+            </div>
+        </nav>
+    )
 }
 
 export default Navbar

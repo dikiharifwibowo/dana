@@ -22,7 +22,6 @@ const Carousel = () => {
     },
    ]
     var settings = {
-        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -30,18 +29,17 @@ const Carousel = () => {
     };
     return (
         <React.Fragment>
-            <div class="container">
                 <Slider {...settings}>
                     {carouselCards.map((card, index) => (
-                    <div key={index}>
-                        <h2>{card.title}</h2>
-                        <img alt={card.title} src={card.imageSrc} style={{ width: '100%' }} />
-                        <p>{card.description}</p>
-                        <button className='btn'>Buy Now</button>
+                    <div key={index} class="carousel">
+                        <div style={{backgroundImage: `url(${card.imageSrc})` }} class="image-slider">
+                            <p class="title is-1">{card.title}</p>
+                            <p class="subtitle is-6">{card.description}</p>
+                            <button class="button transparent">MORE INFO</button>
+                        </div>
                     </div>
                     ))}
                 </Slider>
-            </div>
         </React.Fragment>
     )
 }

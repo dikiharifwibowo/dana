@@ -1,6 +1,7 @@
 import './Style.scss';
 import 'bulma/css/bulma.min.css'
 import Home from './pages/Home'
+import Footer from './components/footer/Footer'; 
 
 function App() {
   return (

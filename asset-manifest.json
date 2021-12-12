@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dana/static/css/main.45b63f22.chunk.css",
-    "main.js": "/dana/static/js/main.4be12a1e.chunk.js",
-    "main.js.map": "/dana/static/js/main.4be12a1e.chunk.js.map",
+    "main.css": "/dana/static/css/main.571dadfb.chunk.css",
+    "main.js": "/dana/static/js/main.ae3a6892.chunk.js",
+    "main.js.map": "/dana/static/js/main.ae3a6892.chunk.js.map",
     "runtime-main.js": "/dana/static/js/runtime-main.1b7f46d3.js",
     "runtime-main.js.map": "/dana/static/js/runtime-main.1b7f46d3.js.map",
     "static/css/2.97648e5b.chunk.css": "/dana/static/css/2.97648e5b.chunk.css",
@@ -12,7 +12,7 @@
     "static/js/3.74fbd1c1.chunk.js.map": "/dana/static/js/3.74fbd1c1.chunk.js.map",
     "index.html": "/dana/index.html",
     "static/css/2.97648e5b.chunk.css.map": "/dana/static/css/2.97648e5b.chunk.css.map",
-    "static/css/main.45b63f22.chunk.css.map": "/dana/static/css/main.45b63f22.chunk.css.map",
+    "static/css/main.571dadfb.chunk.css.map": "/dana/static/css/main.571dadfb.chunk.css.map",
     "static/js/2.8c3687cf.chunk.js.LICENSE.txt": "/dana/static/js/2.8c3687cf.chunk.js.LICENSE.txt",
     "static/media/logo-dana.3f4e59c8.jpg": "/dana/static/media/logo-dana.3f4e59c8.jpg",
     "static/media/slick-theme.css": "/dana/static/media/slick.c94f7671.ttf"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.1b7f46d3.js",
     "static/css/2.97648e5b.chunk.css",
     "static/js/2.8c3687cf.chunk.js",
-    "static/css/main.45b63f22.chunk.css",
-    "static/js/main.4be12a1e.chunk.js"
+    "static/css/main.571dadfb.chunk.css",
+    "static/js/main.ae3a6892.chunk.js"
   ]
 }

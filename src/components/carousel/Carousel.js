@@ -29,17 +29,17 @@ const Carousel = () => {
     };
     return (
         <React.Fragment>
-                <Slider {...settings}>
-                    {carouselCards.map((card, index) => (
-                    <div key={index} class="carousel">
-                        <div style={{backgroundImage: `url(${card.imageSrc})` }} class="image-slider">
-                            <p class="title is-1">{card.title}</p>
-                            <p class="subtitle is-6">{card.description}</p>
-                            <button class="button transparent">MORE INFO</button>
-                        </div>
+            <Slider {...settings}>
+                {carouselCards.map((card, index) => (
+                <div key={index} class="carousel">
+                    <div style={{backgroundImage: `url(${card.imageSrc})` }} class="image-slider">
+                        <p class="title is-1">{card.title}</p>
+                        <p class="subtitle is-6">{card.description}</p>
+                        <button class="button transparent">MORE INFO</button>
                     </div>
-                    ))}
-                </Slider>
+                </div>
+                ))}
+            </Slider>
         </React.Fragment>
     )
 }

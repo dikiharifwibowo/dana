@@ -13,14 +13,14 @@ const Card = () => {
         .then(res => {
             setGalleryRecords(res.data)
         })
-    });
+    }, []); 
     
     const currentTableData = useMemo(() => {
-      const firstPageIndex = (currentPage - 1) * PageSize;
-      const lastPageIndex = firstPageIndex + PageSize;
-      return galleryRecords.slice(firstPageIndex, lastPageIndex);
+        const firstPageIndex = (currentPage - 1) * PageSize;
+        const lastPageIndex = firstPageIndex + PageSize;
+        return galleryRecords.slice(firstPageIndex, lastPageIndex);
     }, [currentPage]);
-
+    
     return (
         <React.Fragment>
             <div class="container section">

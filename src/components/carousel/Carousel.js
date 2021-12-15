@@ -7,17 +7,17 @@ const Carousel = () => {
     const carouselCards = [
     {
         imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg',
-        title: 'Studio Room',
+        title: 'Random Title',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },
     {
         imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-fun-man-person-2361598-image.jpg',
-        title: 'Deluxe Room',
+        title: 'Random Title',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },
     {
         imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-action-athlete-athletes-848618-image.jpg',
-        title: 'King Deluxe Room',
+        title: 'Random Title',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },
    ]

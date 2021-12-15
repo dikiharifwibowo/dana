@@ -5,7 +5,9 @@ import axios from 'axios';
 
 class Home extends Component {
     state = {
-        postRecords: []
+        postRecords: [],
+        staticRandom: '',
+        imageRandom: '',
     }
 
     componentDidMount() {
@@ -15,13 +17,25 @@ class Home extends Component {
                 postRecords: res.data
             })
         })
+        axios.get(`https://api.chucknorris.io/jokes/random`)
+        .then(res => {
+            this.setState({
+                staticRandom: res.data.value
+            })
+        })
+        fetch(`https://source.unsplash.com/random`).then((res) => {
+            this.setState({
+                imageRandom: res.url
+            })
+        }) 
     }
 
     render() {
         return (
             <React.Fragment>
                 <Carousel></Carousel>
-                <BlogPost postRecords={this.state.postRecords}></BlogPost>
+                <BlogPost postRecords={this.state.postRecords} imageRandom={this.state.imageRandom}
+                 staticRandom={this.state.staticRandom}></BlogPost>
             </React.Fragment>
         )
     }

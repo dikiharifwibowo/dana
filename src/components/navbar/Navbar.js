@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from './logo-dana.jpg'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const [isActiveNavbar, setIsActiveNavbar] = useState(false)
@@ -8,9 +9,9 @@ const Navbar = () => {
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="https://bulma.io">
+                    <Link class="navbar-item" to="/dana">
                         <img src={logo} width="112" height="28"/>
-                    </a>
+                    </Link>
 
                     <a role="button" onClick={ () => { setIsActiveNavbar(!isActiveNavbar) } }
                      className={ `navbar-burger ${isActiveNavbar ? 'is-active' : ''}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -22,12 +23,8 @@ const Navbar = () => {
 
                 <div id="navbarBasicExample" className={ `navbar-menu ${isActiveNavbar ? 'is-active' : ''}`}>
                     <div class="navbar-end">
-                        <a class="navbar-item">
-                            About
-                        </a>
-                        <a class="navbar-item">
-                            Contact Us                            
-                        </a>
+                        <Link class="navbar-item" onClick={ () => { setIsActiveNavbar(false) } } to="/about">About</Link>
+                        <Link class="navbar-item" onClick={ () => { setIsActiveNavbar(false) } } to="/contact-us">Contact Us</Link>
                     </div>
                 </div>
             </div>

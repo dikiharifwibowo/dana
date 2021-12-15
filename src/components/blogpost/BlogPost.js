@@ -19,13 +19,14 @@ const BlogPost = (props) => {
                     currentTableData.map((item, index) => {
                         return (
                             <div class="column toaster is-3 ">
-                                <div  key={index} class="img-card" style={{backgroundImage: `url(${item.url})` }}>
+                                <div  key={index} class="img-card" style={{backgroundImage: `url(${props.imageRandom})` }}>
                                     <div class="share">
+                                        <ion-icon name="heart-outline"></ion-icon>
                                         <ion-icon name="share-social-outline"></ion-icon>
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">Lorem ipsum</p>
-                                        <p class="subtitle is-6">{ item.title.substring(0, 50, )+`...` }</p>
+                                        <p class="subtitle is-6">{ props.staticRandom.substring(0, 40, )+`...` }</p>
                                     </div>
                                 </div>
                             </div>
@@ -35,13 +36,14 @@ const BlogPost = (props) => {
                     dataPageFirst.map((item, index) => {
                         return (
                             <div class="column toaster is-3 ">
-                                <div  key={index} class="img-card" style={{backgroundImage: `url(${item.url})` }}>
+                                <div  key={index} class="img-card" style={{backgroundImage: `url(${props.imageRandom})` }}>
                                     <div class="share">
+                                        <ion-icon name="heart-outline"></ion-icon>
                                         <ion-icon name="share-social-outline"></ion-icon>
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">Lorem ipsum</p>
-                                        <p class="subtitle is-6">{ item.title.substring(0, 50)+`...` }</p>
+                                        <p class="subtitle is-6">{ props.staticRandom.substring(0, 40)+`...` }</p>
                                     </div>
                                 </div>
                             </div>

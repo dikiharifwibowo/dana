@@ -13,7 +13,7 @@ const BlogPost = (props) => {
     
     return (
         <React.Fragment>
-            <div class="container section">
+            <div class="container section blog">
                 <div class="columns is-multiline">
                 { currentTableData.length ?
                     currentTableData.map((item, index) => {
@@ -23,9 +23,9 @@ const BlogPost = (props) => {
                                     <div class="share">
                                         <ion-icon name="share-social-outline"></ion-icon>
                                     </div>
-                                    <div class="contect">
+                                    <div class="content">
                                         <p class="title is-5">Lorem ipsum</p>
-                                        <p class="subtitle is-6">{ item.title }</p>
+                                        <p class="subtitle is-6">{ item.title.substring(0, 50, )+`...` }</p>
                                     </div>
                                 </div>
                             </div>
@@ -39,9 +39,9 @@ const BlogPost = (props) => {
                                     <div class="share">
                                         <ion-icon name="share-social-outline"></ion-icon>
                                     </div>
-                                    <div class="contect">
+                                    <div class="content">
                                         <p class="title is-5">Lorem ipsum</p>
-                                        <p class="subtitle is-6">{ item.title }</p>
+                                        <p class="subtitle is-6">{ item.title.substring(0, 50)+`...` }</p>
                                     </div>
                                 </div>
                             </div>

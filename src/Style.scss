@@ -118,6 +118,13 @@
         padding: 6px;
         color: $color-primary;
     }
+    .title, p {
+        color: $color-title !important;
+        font-weight: 300 !important;
+    }
+    .title {
+        margin-bottom: 2rem;
+    }
 }
 .contact-us {
     ion-icon{

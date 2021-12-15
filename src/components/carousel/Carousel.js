@@ -6,7 +6,7 @@ import Slider from 'react-slick';
 const Carousel = () => {
     const carouselCards = [
     {
-        imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg',
+        imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-action-athlete-athletes-848618-image.jpg',
         title: 'Random Title',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },
@@ -16,7 +16,7 @@ const Carousel = () => {
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },
     {
-        imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-action-athlete-athletes-848618-image.jpg',
+        imageSrc: 'https://jssors8.azureedge.net/demos/image-slider/img/px-beach-daylight-fun-1430675-image.jpg',
         title: 'Random Title',
         description: 'Lorem ipsum dolor sit amet, consectur dolori',
     },

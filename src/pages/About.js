@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import img from './about.png'
 
 class About extends Component {
+    state = {
+        title: '',
+        desc: '',
+    }
+
+    componentDidMount() {
+        axios.get(`https://swapi.py4e.com/api/films/1`)
+        .then(res => {
+            this.setState({
+                title: res.data.title,
+                desc: res.data.opening_crawl
+            })
+        })
+    }
 
     render() {
         return(
             <div class="container about section">
 
-                <div class="columns">
+                <div class="columns is-align-items-center">
                     <div class="column is-half">
-                        <p class="title is-4">Lorem Ipsum</p>   
-                        <p class="subtitle">Lorem Ipsum dasdasdasd</p>   
+                        <div class="title is-4">{this.state.title}</div>   
+                        <p class="subtitle">{this.state.desc}</p>   
                     </div>
-                    <div class="column">img</div>
+                    <div class="column is-flex is-justify-content-center">
+                        <img src={img} />
+                    </div>
                     
                 </div>
 

@@ -6,10 +6,11 @@ import axios from 'axios';
 class Home extends Component {
     state = {
         postRecords: [],
-        staticRandom: '',
+        descRandom: '',
         imageRandom: '',
     }
 
+    
     componentDidMount() {
         axios.get(`https://jsonplaceholder.typicode.com/photos`)
         .then(res => {
@@ -17,12 +18,18 @@ class Home extends Component {
                 postRecords: res.data
             })
         })
+        this.loadDescRandom()
+        this.loadRandomImage()
+    }
+    loadDescRandom = () => {
         axios.get(`https://api.chucknorris.io/jokes/random`)
         .then(res => {
             this.setState({
-                staticRandom: res.data.value
+                descRandom: res.data.value
             })
         })
+    }
+    loadRandomImage = () => {
         fetch(`https://source.unsplash.com/random`).then((res) => {
             this.setState({
                 imageRandom: res.url
@@ -34,8 +41,8 @@ class Home extends Component {
         return (
             <React.Fragment>
                 <Carousel></Carousel>
-                <BlogPost postRecords={this.state.postRecords} imageRandom={this.state.imageRandom}
-                 staticRandom={this.state.staticRandom}></BlogPost>
+                <BlogPost parentCallback={() => { this.loadRandomImage(); this.loadDescRandom()} }  postRecords={this.state.postRecords} imageRandom={this.state.imageRandom}
+                 descRandom={this.state.descRandom}></BlogPost>
             </React.Fragment>
         )
     }

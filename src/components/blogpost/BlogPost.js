@@ -39,7 +39,7 @@ const BlogPost = (props) => {
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">static title to {item.id}</p>
-                                        <p class="subtitle is-6">{ props.staticRandom.substring(0, 40, )+`...` }</p>
+                                        <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
                                     </div>
                                 </div>
                             </div>
@@ -56,7 +56,7 @@ const BlogPost = (props) => {
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">static title to {item.id}</p>
-                                        <p class="subtitle is-6">{ props.staticRandom.substring(0, 40, )+`...` }</p>
+                                        <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ const BlogPost = (props) => {
                     currentPage={currentPage}
                     totalCount={props.postRecords.length}
                     pageSize={PageSize}
-                    onPageChange={page => setCurrentPage(page)}
+                    onPageChange={page => { setCurrentPage(page); props.parentCallback() }}
                 />
             </div>
 

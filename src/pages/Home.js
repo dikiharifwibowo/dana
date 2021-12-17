@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Carousel from '../components/carousel/Carousel';
 import BlogPost from '../components/blogpost/BlogPost';
 import axios from 'axios';
+import { connect } from "react-redux";
 
 class Home extends Component {
     state = {
@@ -20,6 +21,7 @@ class Home extends Component {
         })
         this.loadDescRandom()
         this.loadRandomImage()
+        this.props.handleChangePage()
     }
     loadDescRandom = () => {
         axios.get(`https://api.chucknorris.io/jokes/random`)
@@ -48,4 +50,9 @@ class Home extends Component {
     }
 }
 
-export default Home
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleChangePage: () => dispatch({ type: 'CHANGE_PAGE_HOME' }),
+    }
+}
+export default connect('', mapDispatchToProps)(Home);

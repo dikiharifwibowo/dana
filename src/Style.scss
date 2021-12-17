@@ -93,7 +93,6 @@
         background: rgba(0, 0, 0, 0.5);
         overflow: hidden;
         max-height: 320px;
-        pointer-events: none;
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
@@ -121,6 +120,15 @@
         padding: 6px;
         color: $color-primary;
     }
+    .title, p {
+        color: $color-title !important;
+        font-weight: 300 !important;
+    }
+    .title {
+        margin-bottom: 2rem;
+    }
+}
+.detail-post {
     .title, p {
         color: $color-title !important;
         font-weight: 300 !important;

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Pagination from '../Pagination/Pagination';
+import { Link } from "react-router-dom"
 let PageSize = 16;
 
 const BlogPost = (props) => {
@@ -57,8 +58,10 @@ const BlogPost = (props) => {
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <p class="title is-5">static title to {item.id}</p>
-                                        <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
+                                         <Link to={ '/blog/'+item.id }>
+                                            <p class="title is-5">static title to {item.id}</p>
+                                            <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
+                                         </Link>
                                     </div>
                                 </div>
                             </div>
@@ -87,8 +90,10 @@ const BlogPost = (props) => {
                                         </div>
                                     </div>
                                     <div class="content">
-                                        <p class="title is-5">static title to {item.id}</p>
-                                        <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
+                                        <Link to={ '/blog/'+item.id }>
+                                            <p class="title is-5">static title to {item.id}</p>
+                                            <p class="subtitle is-6">{ props.descRandom.substring(0, 35, )+`...` }</p>
+                                         </Link>
                                     </div>
                                 </div>
                             </div>

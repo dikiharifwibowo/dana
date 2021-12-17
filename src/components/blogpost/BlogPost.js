@@ -13,11 +13,17 @@ const BlogPost = (props) => {
     }, [currentPage]);
     
     let handleLovePost = (index, page) => {
-        //currentTableData[index].id = "test"
         if(page==='firstPage') {
             setdataPageFirst([...dataPageFirst, dataPageFirst[index].active = !dataPageFirst[index].active ])
         } else {
             setCurrentTableData([...currentTableData, currentTableData[index].active = !currentTableData[index].active ])
+        }
+    };
+    let handleSharePost = (index, page) => {
+        if(page==='firstPage') {
+            setdataPageFirst([...dataPageFirst, dataPageFirst[index].show = !dataPageFirst[index].show ])
+        } else {
+            setCurrentTableData([...currentTableData, currentTableData[index].show = !currentTableData[index].show ])
         }
     };
     useEffect(() => {
@@ -34,8 +40,21 @@ const BlogPost = (props) => {
                             <div class="column toaster is-3 ">
                                 <div  key={index} class="img-card" style={{backgroundImage: `url(${props.imageRandom})` }}>
                                     <div class="share">
-                                        <ion-icon class={ item.active ? `md hydrated red` : `md hydrated`} name={ item.active ? `heart` : `heart-outline`} onClick={() => handleLovePost(index)}></ion-icon>
-                                        <ion-icon name="share-social-outline"></ion-icon>
+                                        <div class="is-flex absolute">
+                                            <ion-icon class={ item.active ? `md hydrated red` : `md hydrated`} name={ item.active ? `heart` : `heart-outline`} onClick={() => handleLovePost(index)}></ion-icon>
+                                            { !item.show ? 
+                                                <div class="is-flex">
+                                                    <ion-icon onClick={() => handleSharePost(index)} name="share-social-outline"></ion-icon>
+                                                </div>
+                                            : 
+                                                <div class="is-flex is-flex-direction-column">
+                                                    <ion-icon onClick={() => handleSharePost(index)} name="close-circle-sharp"></ion-icon>
+                                                    <ion-icon name="logo-facebook"></ion-icon>
+                                                    <ion-icon name="logo-instagram"></ion-icon>
+                                                    <ion-icon name="logo-twitter"></ion-icon>
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">static title to {item.id}</p>
@@ -51,8 +70,21 @@ const BlogPost = (props) => {
                             <div class="column toaster is-3 ">
                                 <div  key={index} class="img-card" style={{backgroundImage: `url(${props.imageRandom})` }}>
                                     <div class="share">
-                                        <ion-icon class={ item.active ? `md hydrated red` : `md hydrated`} name={ item.active ? `heart` : `heart-outline`} onClick={() => handleLovePost(index, 'firstPage')}></ion-icon>
-                                        <ion-icon name="share-social-outline"></ion-icon>
+                                        <div class="is-flex absolute">
+                                            <ion-icon class={ item.active ? `md hydrated red` : `md hydrated`} name={ item.active ? `heart` : `heart-outline`} onClick={() => handleLovePost(index, 'firstPage')}></ion-icon>
+                                            { !item.show ? 
+                                                <div class="is-flex">
+                                                    <ion-icon onClick={() => handleSharePost(index, 'firstPage')} name="share-social-outline"></ion-icon>
+                                                </div>
+                                            : 
+                                                <div class="is-flex is-flex-direction-column">
+                                                    <ion-icon onClick={() => handleSharePost(index, 'firstPage')} name="close-circle-sharp"></ion-icon>
+                                                    <ion-icon name="logo-facebook"></ion-icon>
+                                                    <ion-icon name="logo-instagram"></ion-icon>
+                                                    <ion-icon name="logo-twitter"></ion-icon>
+                                                </div>
+                                            }
+                                        </div>
                                     </div>
                                     <div class="content">
                                         <p class="title is-5">static title to {item.id}</p>

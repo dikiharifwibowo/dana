@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import { Link } from "react-router-dom";
-
+import { connect } from "react-redux";
 class ContactUs extends Component {
-
+    componentDidMount() {
+        this.props.handleChangePage()
+    }
     render() {
         return(
             <div class="container contact-us section">
@@ -56,4 +56,9 @@ class ContactUs extends Component {
     }
 }
 
-export default ContactUs
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleChangePage: () => dispatch({ type: 'CHANGE_PAGE_CONTACT' }),
+    }
+}
+export default connect('', mapDispatchToProps)(ContactUs);

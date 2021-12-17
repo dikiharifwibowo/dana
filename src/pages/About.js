@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import img from './about.png'
+import { connect } from "react-redux";
 
 class About extends Component {
     state = {
@@ -16,6 +17,7 @@ class About extends Component {
                 desc: res.data.opening_crawl
             })
         })
+        this.props.handleChangePage()
     }
 
     render() {
@@ -68,4 +70,9 @@ class About extends Component {
     }
 }
 
-export default About
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleChangePage: () => dispatch({ type: 'CHANGE_PAGE_ABOUT' }),
+    }
+}
+export default connect('', mapDispatchToProps)(About);

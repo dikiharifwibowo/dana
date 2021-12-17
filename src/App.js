@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar' 
 import About from './pages/About';
 import ContactUs from './pages/Contact';
+import DetailPost from './pages/DetailPost';
 import { createStore } from 'redux';
 import {Provider} from 'react-redux';
 
@@ -36,6 +37,13 @@ const rootReducer = (state = globalState, action) => {
       page: 'Contact'
     }  
   }
+  if(action.type==="CHANGE_PAGE_DETAIL_POST") {
+    document.title = 'Detail Post - Dikih Arif Wibowo';
+    return {
+      ...state,
+      page: 'Detail Post'
+    }  
+  }
 
   return state;
 }
@@ -53,6 +61,7 @@ function App() {
           <Route path="/dana" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/blog/:id" element={<DetailPost />} />
         </Routes>
         <Footer></Footer>
       </div>

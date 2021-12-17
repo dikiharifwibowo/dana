@@ -19,7 +19,6 @@ class About extends Component {
         })
         this.props.handleChangePage()
     }
-
     render() {
         return(
             <div class="container about section">
